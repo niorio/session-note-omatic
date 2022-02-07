@@ -39,7 +39,7 @@ export default function Home() {
           onSubmit={(values) => {
             const { name, activity, task, answered, asked, cues, skills, gender } = values;
             const pronoun = gender == "M" ? "He" : "She";
-            const text = `${name} was alert and compliant throughout the duration of this session. ${pronoun} completed ${activity} in which they had to ${task}. ${name} answered ${answered}/${asked} questions. ${pronoun} benefitted from ${cues}. Clinician will continue targetting ${name}'s ability to ${skills}.`;
+            const text = `${name} was alert and compliant throughout the duration of this session. ${pronoun} completed ${activity} in which ${pronoun.toLowerCase()} had to ${task}. ${name} answered ${answered}/${asked} questions. ${pronoun} benefitted from ${cues}. Clinician will continue targeting ${name}'s ability to ${skills}.`;
             setSummary(text);
           }}
         >
